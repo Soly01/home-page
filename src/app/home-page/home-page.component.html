@@ -1,21 +1,48 @@
 <section class="homePage w-100">
-  <div class="header mb-5 d-flex gap-2 justify-content-end container">
+  <div class="header mt-3 mb-5 d-flex gap-2 justify-content-end container">
     <p-button label="Get Started Now" variant="text" />
     <p-button label="Login" [raised]="true" severity="contrast" />
   </div>
-  <div class="d-flex align-items-center gap-5">
+  <div class="d-flex align-items-center gap-5 position-relative">
     <div class="image blob"><img src="/person.png" alt="Image" /></div>
-    <div class="text">
-      <h1>
+    <div class="position-absolute card">
+      <p-card>
+        <ng-template class="position-relative" #header>
+          <p-avatar
+            image="https://primefaces.org/cdn/primeng/images/demo/avatar/xuxuefeng.png"
+            class="mr-2"
+            size="xlarge"
+            shape="circle"
+          />
+          <div class="overlay position-absolute"></div>
+        </ng-template>
+        <ng-template #title> James Bruno </ng-template>
+        <ng-template #subtitle> Digital Marketer </ng-template>
+      </p-card>
+    </div>
+
+    <div class="text mt-5 pt-5">
+      <h1 class="mb-5">
         We Help You
         <br />
         <span>Build & Grow an</span>
         <br />
         Online Business
       </h1>
-    </div>
-    <div class="search-bar">
-      <input type="text" pInputText />
+      <div class="search-bar container">
+        <input
+          type="text"
+          pInputText
+          placeholder="Tell us what you need to build..."
+        />
+        <div class="button position-relative">
+          <p-button
+            class="position-absolute btn"
+            icon="pi pi-search"
+            severity="help"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </section>

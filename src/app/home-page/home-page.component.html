@@ -1,1 +1,21 @@
-<p class="d-flex">home-page works!</p>
+<section class="homePage w-100">
+  <div class="header mb-5 d-flex gap-2 justify-content-end container">
+    <p-button label="Get Started Now" variant="text" />
+    <p-button label="Login" [raised]="true" severity="contrast" />
+  </div>
+  <div class="d-flex align-items-center gap-5">
+    <div class="image blob"><img src="/person.png" alt="Image" /></div>
+    <div class="text">
+      <h1>
+        We Help You
+        <br />
+        <span>Build & Grow an</span>
+        <br />
+        Online Business
+      </h1>
+    </div>
+    <div class="search-bar">
+      <input type="text" pInputText />
+    </div>
+  </div>
+</section>

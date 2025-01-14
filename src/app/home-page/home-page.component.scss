@@ -1,0 +1,19 @@
+.p-button-contrast {
+  background: var(--p-surface-100) !important;
+}
+.p-button-text {
+  color: var(--p-surface-800) !important;
+  text-decoration: underline;
+}
+.p-button-text:not(:disabled):hover {
+  background: var(--mo-warning-border-subtle) !important;
+}
+.blob {
+  height: 500px;
+  width: 871px !important;
+  background-image: url(../../../public/image.png);
+}
+h1 {
+  font-weight: 700;
+  font-size: 4.5rem;
+}

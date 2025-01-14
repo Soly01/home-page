@@ -1,9 +1,14 @@
 <section class="homePage w-100">
   <div class="header mt-3 mb-5 d-flex gap-2 justify-content-end container">
     <p-button label="Get Started Now" variant="text" />
-    <p-button label="Login" [raised]="true" severity="contrast" />
+    <p-button
+      rounded="true"
+      label="Login"
+      [raised]="true"
+      severity="contrast"
+    />
   </div>
-  <div class="d-flex align-items-center gap-5 position-relative">
+  <div class="d-flex align-items-center gap-5 position-relative pb-5 mb-5">
     <div class="image blob"><img src="/person.png" alt="Image" /></div>
     <div class="position-absolute card">
       <p-card>
@@ -45,10 +50,80 @@
       </div>
     </div>
   </div>
-  <div class="companies d-flex justify-content-between">
-    <span>Companies we've helped build</span>
-    <div class="compaines-images">
-      <img src="/Companies.png" alt="" />
+  <div class="companies mt-5 pt-5 mb-5 pb-5">
+    <div
+      class="compaines-images d-flex justify-content-between container align-items-center"
+    >
+      <span class="companiesSpan">Companies we've helped build</span>
+      <img class="w-50" src="/Companies.png" alt="" />
+    </div>
+  </div>
+  <div class="sell mt-5 pt-5 container d-flex justify-content-evenly">
+    <div class="sell-text">
+      <h4 class="text-uppercase mb-3 pb-3">we help you</h4>
+      <h1>
+        Sell
+        <br />
+        Stunning
+        <br />Products
+      </h1>
+      <p class="mt-2 pt-2">
+        We'll guide you through our unique 5-step <br />
+        brand-building framework
+      </p>
+      <p-button
+        class="moreBtn"
+        label="More Details"
+        iconPos="right"
+        severity="help"
+        icon="pi pi-angle-right"
+        rounded="true"
+      />
+    </div>
+    <div class="minimal position-relative">
+      <p-card>
+        <ng-template #header>
+          <img alt="Card" class="w-100 position-absolute" src="/chair.png" />
+        </ng-template>
+        <ng-template #title>
+          <span class="">Minimal Chair</span>
+        </ng-template>
+        <ng-template #footer>
+          <hr />
+          <div class="d-flex justify-content-between align-items-end gap-4">
+            <p>$204 <span>.00</span></p>
+            <p-button
+              icon="pi pi-shopping-cart
+            "
+              class="w-full"
+              styleClass="w-full"
+            />
+          </div>
+        </ng-template>
+      </p-card>
+    </div>
+    <div class="beats position-relative">
+      <p-card>
+        <ng-template #header>
+          <img alt="Card" class="w-100 position-absolute" src="/beats.png" />
+        </ng-template>
+        <ng-template #title>
+          <span class="">Beats Headphone</span>
+        </ng-template>
+        <ng-template #footer>
+          <hr />
+          <div class="d-flex justify-content-between align-items-end gap-4">
+            <p>$74 <span>.00</span></p>
+            <p-button
+              icon="pi pi-shopping-cart
+            "
+              class="w-full"
+              styleClass="w-full"
+            />
+          </div>
+        </ng-template>
+      </p-card>
     </div>
   </div>
 </section>
+<div class="gradieant"></div>

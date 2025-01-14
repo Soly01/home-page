@@ -47,11 +47,12 @@ h1 {
 }
 .gradieant {
   position: absolute;
-  height: 450px;
+  height: 430px;
+  width: 250px;
   background-image: url(../../../public/Untitled.png);
-  top: 405px;
-  left: 75%;
-  right: 5%;
+  top: 435px;
+  left: 80%;
+  right: 0%;
   z-index: -9;
 }
 .card {
@@ -87,4 +88,141 @@ h1 {
   border-bottom: none;
   border-left: none;
   border-top: none;
+}
+.companiesSpan {
+  color: #797b8b;
+}
+.sell-text {
+  h4 {
+    color: #f5d734;
+  }
+}
+.moreBtn {
+  color: white;
+  .pi {
+    color: #714bec;
+    background-color: var(--mo-body-bg);
+    border-radius: 50%;
+    padding: 6px;
+    font-size: 25px !important;
+    text-transform: uppercase;
+  }
+  .p-button-help {
+    background: linear-gradient(to right, #4834d0, #903aff) !important;
+  }
+  .p-button-label {
+    padding: 10px 35px !important;
+
+    color: white;
+    text-transform: uppercase;
+  }
+  .p-button-rounded {
+    border-radius: 25px !important;
+  }
+}
+.minimal {
+  margin-top: 150px;
+  .p-card {
+    width: 225px;
+    height: 200px;
+    .p-card-header {
+      img {
+        bottom: 87%;
+        left: -10px;
+      }
+    }
+    .p-card-body {
+      .p-card-title {
+        span {
+          font-weight: bold;
+        }
+      }
+      gap: 20px;
+      padding-bottom: 0px;
+    }
+    .p-card-footer {
+      p {
+        color: #f5d734;
+        font-weight: bold;
+        margin-bottom: 0;
+        span {
+          font-weight: lighter;
+        }
+      }
+      .p-button {
+        background-color: transparent;
+        color: black;
+        border-color: transparent;
+        padding: 0;
+        .pi {
+          color: black;
+        }
+      }
+    }
+  }
+}
+.minimal::before {
+  content: "";
+  position: absolute;
+  top: 2%;
+  left: 32%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #f5d734;
+  z-index: -1;
+}
+.beats {
+  margin-top: 260px;
+  .p-card {
+    width: 225px;
+    height: 200px;
+    .p-card-header {
+      img {
+        bottom: 87%;
+        left: -10px;
+      }
+    }
+    .p-card-body {
+      .p-card-title {
+        span {
+          font-weight: bold;
+        }
+      }
+      gap: 20px;
+      padding-bottom: 0px;
+    }
+    .p-card-footer {
+      p {
+        color: #f5d734;
+        font-weight: bold;
+        margin-bottom: 0;
+        span {
+          font-weight: lighter;
+        }
+      }
+      .p-button {
+        background-color: transparent;
+        color: black;
+        border-color: transparent;
+        padding: 0;
+        .pi {
+          color: black;
+        }
+      }
+    }
+  }
+}
+.beats::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: 56%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #4834d0;
+  z-index: -1;
 }

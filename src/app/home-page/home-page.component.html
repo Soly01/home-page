@@ -1,4 +1,4 @@
-<section class="homePage w-100">
+<section class="homePage w-100 col-lg-12 col-md-8 col-sm-4">
   <div class="header mt-3 mb-5 d-flex gap-2 justify-content-end container">
     <p-button label="Get Started Now" variant="text" />
     <p-button
@@ -8,7 +8,9 @@
       severity="contrast"
     />
   </div>
-  <div class="d-flex align-items-center gap-5 position-relative pb-5 mb-5">
+  <div
+    class="col-lg -12 col-md-8 col-sm-4 main d-flex align-items-center gap-5 position-relative pb-5 mb-5"
+  >
     <div class="image blob"><img src="/person.png" alt="Image" /></div>
     <div class="position-absolute card">
       <p-card>
@@ -58,7 +60,7 @@
       <img class="w-50" src="/Companies.png" alt="" />
     </div>
   </div>
-  <div class="sell mt-5 pt-5 container d-flex justify-content-evenly">
+  <div class="sell mt-5 pt-5 mb-5 pb-5 container d-flex justify-content-evenly">
     <div class="sell-text">
       <h4 class="text-uppercase mb-3 pb-3">we help you</h4>
       <h1>
@@ -80,49 +82,221 @@
         rounded="true"
       />
     </div>
-    <div class="minimal position-relative">
+    <div class="flex-row d-flex gap-5 products">
+      <div class="minimal position-relative">
+        <p-card>
+          <ng-template #header>
+            <img alt="Card" class="w-100 position-absolute" src="/chair.png" />
+          </ng-template>
+          <ng-template #title>
+            <span class="">Minimal Chair</span>
+          </ng-template>
+          <ng-template #footer>
+            <hr />
+            <div class="d-flex justify-content-between align-items-end gap-4">
+              <p>$204 <span>.00</span></p>
+              <p-button
+                icon="pi pi-shopping-cart
+            "
+                class="w-full"
+                styleClass="w-full"
+              />
+            </div>
+          </ng-template>
+        </p-card>
+      </div>
+      <div class="beats position-relative">
+        <p-card>
+          <ng-template #header>
+            <img alt="Card" class="w-100 position-absolute" src="/beats.png" />
+          </ng-template>
+          <ng-template #title>
+            <span class="">Beats Headphone</span>
+          </ng-template>
+          <ng-template #footer>
+            <hr />
+            <div class="d-flex justify-content-between align-items-end gap-4">
+              <p>$74 <span>.00</span></p>
+              <p-button
+                icon="pi pi-shopping-cart
+            "
+                class="w-full"
+                styleClass="w-full"
+              />
+            </div>
+          </ng-template>
+        </p-card>
+      </div>
+    </div>
+  </div>
+  <div class="cards-bgimage">
+    <div class="cards d-grid container mt-5 pt-5">
       <p-card>
         <ng-template #header>
-          <img alt="Card" class="w-100 position-absolute" src="/chair.png" />
+          <img alt="Card" class="w-full" src="/fashion.jpg" alt="image" />
         </ng-template>
         <ng-template #title>
-          <span class="">Minimal Chair</span>
+          <span class="text-uppercase fs-6">Fashion Store </span>
         </ng-template>
-        <ng-template #footer>
-          <hr />
-          <div class="d-flex justify-content-between align-items-end gap-4">
-            <p>$204 <span>.00</span></p>
-            <p-button
-              icon="pi pi-shopping-cart
-            "
-              class="w-full"
-              styleClass="w-full"
-            />
-          </div>
+        <ng-template #subtitle>
+          Shop ladies fashion at Missguided USA With hundereds of new styles
+          hitting our shelves every week
+        </ng-template>
+      </p-card>
+      <p-card>
+        <ng-template #header>
+          <img alt="Card" class="w-full" src="/sofa.jpg" alt="image" />
+        </ng-template>
+        <ng-template #title>
+          <span class="text-uppercase fs-6">Home Furniture</span>
+        </ng-template>
+        <ng-template #subtitle>
+          Provides suprior quality furniture and mattresses at a price that
+          customers can easily afford
+        </ng-template>
+      </p-card>
+      <p-card>
+        <ng-template #header>
+          <img alt="Card" class="w-full" src="/music.jpg" alt="image" />
+        </ng-template>
+        <ng-template #title>
+          <span class="text-uppercase fs-6">super gadget store </span>
+        </ng-template>
+        <ng-template #subtitle>
+          Specialize in selling unique gifts, cool gadgets, outdoor gear and fab
+          toys
         </ng-template>
       </p-card>
     </div>
-    <div class="beats position-relative">
+  </div>
+  <div class="revenue container mt-5 pt-5 mb-5 pb-5 d-flex">
+    <div
+      class="revnue-cards d-flex justify-content-between me-5 pe-5 gap-5 flex-column"
+    >
+      <div class="blue position-relative">
+        <p-card class="d-flex flex-row gap-2">
+          <div class="wavy-line">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 500 100"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M0,50 C150,0 350,100 500,50"
+                fill="none"
+                stroke="#61c8f6"
+                stroke-width="3"
+              ></path>
+            </svg>
+          </div>
+          <p-avatar
+            image="https://primefaces.org/cdn/primeng/images/demo/avatar/xuxuefeng.png"
+            class="mr-2"
+            size="xlarge"
+            shape="circle"
+          />
+          <div class="money d-flex flex-column ms-4">
+            <h2 class="fw-bold fs-3">$ 7,654 <i class="pi pi-angle-up"></i></h2>
+            <p class="text-uppercases">TOTAL REVENUE <span>+$232</span></p>
+          </div>
+
+          <div class="overlay position-absolute"></div>
+        </p-card>
+      </div>
+
+      <div class="green position-relative">
+        <p-card class="d-flex flex-row gap-2 ms-5">
+          <div class="wavy-line-green">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 500 100"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M0,50 C100,0 200,100 300,50 C400,0 500,100"
+                fill="none"
+                stroke="#4ee5a3"
+                stroke-width="3"
+              ></path>
+            </svg>
+          </div>
+
+          <div class="money d-flex flex-column ms-4">
+            <h2 class="fw-bold fs-3">$ 9,978 <i class="pi pi-angle-up"></i></h2>
+            <p class="text-uppercases">TOTAL REVENUE <span>+$349</span></p>
+          </div>
+          <p-avatar
+            image="https://primefaces.org/cdn/primeng/images/demo/avatar/xuxuefeng.png"
+            class="mr-2"
+            size="xlarge"
+            shape="circle"
+          />
+          <div class="overlay position-absolute"></div>
+        </p-card>
+      </div>
+    </div>
+    <div class="sell-text ms-5 ps-5">
+      <h4 class="text-uppercase mb-3 pb-3">What we do</h4>
+      <h1>
+        Increase Our
+        <br />
+        Customers
+        <br />Sales
+      </h1>
+      <p class="mt-2 pt-2">
+        Our customers are seeing big results within <br />
+        the first three months
+      </p>
+      <p-button
+        class="moreBtn"
+        label="More Details"
+        iconPos="right"
+        severity="help"
+        icon="pi pi-angle-right"
+        rounded="true"
+      />
+    </div>
+  </div>
+  <div class="bg">
+    <div
+      class="contact-us mt-5 pt-5 container d-flex flex-row justify-content-between"
+    >
       <p-card>
-        <ng-template #header>
-          <img alt="Card" class="w-100 position-absolute" src="/beats.png" />
-        </ng-template>
-        <ng-template #title>
-          <span class="">Beats Headphone</span>
-        </ng-template>
+        <ng-template #header> <h3>Write Us</h3> </ng-template>
+
+        <p-floatlabel class="mb-5">
+          <input
+            pInputText
+            id="email"
+            formControlName="email"
+            autocomplete="off"
+            class="w-100 p-0"
+          />
+          <label for="over_label">Email</label>
+        </p-floatlabel>
+        <textarea
+          placeholder="Enter Your Message"
+          rows="5"
+          cols="30"
+          pTextarea
+          formControlName="text"
+        ></textarea>
+
         <ng-template #footer>
-          <hr />
-          <div class="d-flex justify-content-between align-items-end gap-4">
-            <p>$74 <span>.00</span></p>
+          <div class="flex gap-4 mt-1">
             <p-button
-              icon="pi pi-shopping-cart
-            "
+              label="SEND YOUR MESSAGE"
+              severity="help"
               class="w-full"
+              [outlined]="true"
               styleClass="w-full"
             />
           </div>
         </ng-template>
       </p-card>
+      <div class="bg-img">
+        <img class="w-50 h-100" src="/laugh.png" alt="" />
+      </div>
     </div>
   </div>
 </section>

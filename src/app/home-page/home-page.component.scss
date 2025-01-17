@@ -1,3 +1,6 @@
+section {
+  height: fit-content;
+}
 .p-button-contrast {
   background: var(--p-surface-100) !important;
 }
@@ -55,19 +58,22 @@ h1 {
   right: 0%;
   z-index: -9;
 }
-.card {
-  left: 20%;
-  bottom: 0%;
-}
 .p-card {
   background: var(--p-surface-0) !important;
   color: black !important;
-  width: 280px;
-  height: 280px;
-  display: flex;
   justify-content: center;
   text-align: center;
 }
+.card {
+  left: 20%;
+  bottom: 0%;
+  .p-card {
+    width: 280px;
+    height: 280px;
+    display: flex;
+  }
+}
+
 .p-avatar-xl {
   width: 8rem !important;
   height: 8rem !important;
@@ -225,4 +231,315 @@ h1 {
   border-radius: 50%;
   background-color: #4834d0;
   z-index: -1;
+}
+.cards-bgimage {
+  background-image: url(../../../public/image.png);
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem; /* Space between the cards */
+  padding: 2rem; /* Optional padding around the grid */
+  .p-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    padding: 1rem;
+    width: 320px; /* Fixed width */
+    height: 450px; /* Fixed height */
+    img {
+      width: 100%;
+      height: auto;
+      border-bottom: 1px solid #eaeaea;
+    }
+  }
+}
+.revenue .revnue-cards {
+  width: fit-content;
+  .p-card {
+    .p-avatar-xl {
+      width: 6rem !important;
+      height: 6rem !important;
+    }
+    .p-card-content {
+      display: flex;
+      flex-direction: row;
+    }
+    .money {
+      h2 {
+        i {
+          background-color: #903aff;
+          border-radius: 50%;
+          color: white !important;
+          font-size: 13px !important;
+        }
+      }
+      p {
+        font-size: 13px;
+        span {
+          color: #4ee5a3;
+        }
+      }
+    }
+  }
+  .blue .p-card {
+    .overlay {
+      top: 50%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+      width: 70px;
+      height: 70px;
+      border: 3px solid purple;
+      border-radius: 50%;
+      border-bottom: none;
+      border-left: none;
+      border-top: none;
+    }
+  }
+  .green .p-card {
+    .overlay {
+      top: 50%;
+      left: 82%;
+      transform: translate(-50%, -50%);
+      width: 70px;
+      height: 70px;
+      border: 3px solid purple;
+      border-radius: 50%;
+      border-bottom: none;
+      border-left: none;
+      border-top: none;
+    }
+  }
+}
+.blue::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: #61c8f6; /* Blue circle */
+  border-radius: 50%;
+  top: -30px; /* Adjust position */
+  left: -40px; /* Adjust position */
+  z-index: -1; /* Place behind the card */
+}
+.green::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: #4ee5a3; /* Blue circle */
+  border-radius: 50%;
+  top: -30px; /* Adjust position */
+  left: 260px;
+  z-index: -1; /* Place behind the card */
+}
+.wavy-line {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  top: 50%; /* Position relative to container */
+  left: 0;
+  transform: translateY(-50%);
+  pointer-events: none; /* Ensure the line is non-interactive */
+  transform: rotate(160deg);
+}
+
+.wavy-line svg {
+  width: 100%;
+  height: 100%;
+}
+.wavy-line-green {
+  position: absolute;
+  width: 120%;
+  height: 100px;
+  top: 70%;
+  left: -170px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transform: rotate(160deg);
+}
+.contact-us {
+  .p-inputtext {
+    padding-block: 5px !important;
+    font-size: 15px !important;
+  }
+
+  .p-floatlabel label {
+    color: #4834d0 !important;
+  }
+  .p-inputtext:enabled:focus {
+    border-color: #4834d0 !important;
+  }
+  .p-textarea {
+    background-color: white;
+    color: black;
+    caret-color: #4834d0 !important;
+  }
+  .p-textarea:enabled:focus {
+    border-color: #4834d0 !important;
+  }
+  .p-button-help {
+    color: white !important;
+  }
+}
+.bg-img {
+  background-image: url(../../../public/image.png);
+}
+@media (max-width: 1440px) {
+  .gradieant {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .main {
+    flex-direction: column !important;
+    width: 100%;
+  }
+  .card {
+    left: 15%;
+    bottom: 40%;
+  }
+  .gradieant {
+    display: none;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 0px;
+    padding: 2rem;
+    width: 100%;
+    .p-card {
+      width: 270px;
+      height: 400px;
+    }
+  }
+  .revenue .revnue-cards {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+}
+@media (max-width: 768px) {
+  .blob {
+    width: 768px !important;
+    img {
+      width: 768px;
+    }
+  }
+  .sell {
+    flex-direction: column;
+    align-items: center;
+  }
+  .minimal .p-card .p-card-header img {
+    bottom: 87%;
+    left: -10px;
+    width: 200px !important;
+  }
+  .beats .p-card .p-card-header img {
+    bottom: 87%;
+    left: -10px;
+    width: 200px !important;
+  }
+  .sell-text {
+    padding: 0px !important;
+    margin-bottom: 40px;
+  }
+  .green::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #4ee5a3;
+    border-radius: 50%;
+    top: -50px;
+    left: 160px;
+    z-index: -1;
+  }
+  .bg-img {
+    img {
+      width: 75% !important;
+    }
+  }
+}
+@media (max-width: 425px) {
+  .image {
+    display: none;
+  }
+  .card {
+    position: relative !important;
+    left: 0%;
+  }
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .search-bar {
+    .p-inputtext {
+      width: 400px;
+      font-size: 20px !important;
+    }
+  }
+  .products {
+    flex-direction: column !important;
+  }
+  .cards-bgimage {
+    .cards {
+      place-items: center;
+      gap: 10px;
+    }
+  }
+  .revenue {
+    flex-direction: column;
+  }
+  .blue::before {
+    top: -50px;
+    left: -10px;
+  }
+  .green::before {
+    left: 250px;
+  }
+  .sell-text {
+    margin: 0px !important;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+    text-align: center;
+  }
+  .contact-us {
+    .p-card {
+      width: 400px;
+    }
+    .bg-img {
+      display: none;
+    }
+  }
+}
+@media (max-width: 375px) {
+  .search-bar {
+    .btn {
+      background: #714bec !important;
+      right: 10px;
+      bottom: 7px;
+      border-radius: 15px;
+    }
+    .p-inputtext {
+      width: 305px;
+      font-size: 15px !important;
+    }
+  }
+  .green::before,
+  .blue::before {
+    display: none;
+  }
+  .contact-us .p-card {
+    width: 350px;
+    .p-textarea {
+      max-width: 100%;
+    }
+  }
+}
+@media (max-width: 325px) {
+  .contact-us .p-card {
+    width: 300px;
+  }
 }

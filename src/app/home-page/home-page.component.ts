@@ -5,6 +5,10 @@ import { CardModule } from 'primeng/card';
 
 import { AvatarModule } from 'primeng/avatar';
 import { AvatarGroupModule } from 'primeng/avatargroup';
+import { CommonModule } from '@angular/common';
+import { FloatLabel } from 'primeng/floatlabel';
+import { TextareaModule } from 'primeng/textarea';
+
 @Component({
   selector: 'app-home-page',
   imports: [
@@ -13,6 +17,9 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
     CardModule,
     AvatarModule,
     AvatarGroupModule,
+    CommonModule,
+    FloatLabel,
+    TextareaModule,
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',

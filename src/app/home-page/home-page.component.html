@@ -261,39 +261,44 @@
     <div
       class="contact-us mt-5 pt-5 container d-flex flex-row justify-content-between"
     >
-      <p-card>
-        <ng-template #header> <h3>Write Us</h3> </ng-template>
+      <form [formGroup]="contact">
+        <p-card>
+          <ng-template #header> <h3>Write Us</h3> </ng-template>
 
-        <p-floatlabel class="mb-5">
-          <input
-            pInputText
-            id="email"
-            formControlName="email"
-            autocomplete="off"
-            class="w-100 p-0"
-          />
-          <label for="over_label">Email</label>
-        </p-floatlabel>
-        <textarea
-          placeholder="Enter Your Message"
-          rows="5"
-          cols="30"
-          pTextarea
-          formControlName="text"
-        ></textarea>
-
-        <ng-template #footer>
-          <div class="flex gap-4 mt-1">
-            <p-button
-              label="SEND YOUR MESSAGE"
-              severity="help"
-              class="w-full"
-              [outlined]="true"
-              styleClass="w-full"
+          <p-floatlabel class="mb-5">
+            <input
+              pInputText
+              id="email"
+              formControlName="email"
+              autocomplete="off"
+              class="w-100 p-0"
             />
-          </div>
-        </ng-template>
-      </p-card>
+            <label for="over_label">Email</label>
+          </p-floatlabel>
+          <textarea
+            placeholder="Enter Your Message"
+            rows="5"
+            cols="30"
+            pTextarea
+            formControlName="message"
+          ></textarea>
+
+          <ng-template #footer>
+            <div class="flex gap-4 mt-1">
+              <p-button
+                (onClick)="onSubmit()"
+                label="SEND YOUR MESSAGE"
+                severity="help"
+                class="w-full"
+                [outlined]="true"
+                styleClass="w-full"
+                [disabled]="contact.invalid"
+              />
+            </div>
+          </ng-template>
+        </p-card>
+      </form>
+
       <div class="bg-img">
         <img class="w-50 h-100" src="/laugh.png" alt="" />
       </div>

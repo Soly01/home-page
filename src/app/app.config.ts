@@ -8,6 +8,7 @@ import {
   withEventReplay,
 } from '@angular/platform-browser';
 import Aura from '@primeng/themes/aura';
+import { provideHttpClient } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -18,5 +19,6 @@ export const appConfig: ApplicationConfig = {
     providePrimeNG({
       theme: { preset: Aura },
     }),
+    provideHttpClient(),
   ],
 };

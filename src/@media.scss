@@ -1,4 +1,4 @@
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .main {
     flex-direction: column !important;
     width: 100% !important;
@@ -74,7 +74,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .main {
     .card {
       left: 40% !important;
@@ -122,7 +122,7 @@
   }
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   section {
     width: fit-content;
     .image {
@@ -185,6 +185,58 @@
     }
     .contact-us {
       margin-bottom: 0px !important;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  section {
+    .main {
+      .card {
+        left: 70% !important;
+        transform: translateX(-50%) !important;
+      }
+      .search-bar {
+        .p-inputtext {
+          width: 75% !important;
+        }
+        .btn {
+          bottom: 113px !important;
+          transform: translateY(-100px);
+          left: 70% !important;
+        }
+      }
+    }
+    .sell {
+      .chair,
+      .headphone {
+        justify-content: center;
+        display: flex;
+        margin-bottom: 170px;
+      }
+      .minimal,
+      .beats {
+        .p-card {
+          .p-card-content {
+            img {
+              height: 250px !important;
+            }
+          }
+        }
+      }
+    }
+    .revenue {
+      margin-left: 0px !important;
+      .sell-text {
+        margin-left: 0px !important;
+      }
+      .revnue-cards {
+        margin-left: 70px !important;
+      }
+    }
+
+    .green::before,
+    .beats::before {
+      display: none;
     }
   }
 }

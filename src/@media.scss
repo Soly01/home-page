@@ -1,0 +1,185 @@
+@media (max-width: 1024px) {
+  .main {
+    flex-direction: column !important;
+    width: 100% !important;
+    .card {
+      left: 40% !important;
+      top: -115px !important;
+      z-index: 2;
+    }
+  }
+  .search-bar {
+    .btn {
+      left: 80% !important;
+      bottom: 448px !important;
+    }
+    .p-inputtext {
+      width: 75% !important;
+      font-size: 18px !important;
+    }
+  }
+  .gradieant {
+    display: none;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 0px;
+    padding: 2rem;
+    width: 100%;
+    margin-left: 0px !important;
+    place-items: left;
+    .p-card {
+      width: 270px;
+      height: 400px;
+    }
+  }
+  .sell {
+    .beats {
+      .p-card {
+        .p-card-content {
+          img {
+            bottom: 70% !important;
+          }
+        }
+      }
+    }
+  }
+  .revenue {
+    margin-left: 60px !important;
+    .revnue-cards {
+      padding: 0px !important;
+      margin-left: 110px;
+      .green {
+        margin-top: 30px;
+      }
+      .green::before {
+        top: 0px !important;
+        left: 200px !important;
+      }
+    }
+    .sell-text {
+      margin-left: 70px;
+    }
+  }
+  .cards-bgimage {
+    height: 100% !important;
+    // margin-bottom: 350px !important;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    .card {
+      left: 40% !important;
+      top: -290px !important;
+    }
+    h1 {
+      text-align: center;
+    }
+    .search {
+      width: 100% !important;
+    }
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      .search-bar-input {
+        display: flex;
+        justify-content: center;
+        width: 100% !important;
+      }
+      .p-inputtext {
+        justify-content: center;
+        width: 50% !important;
+      }
+      .btn {
+        left: 65% !important;
+        bottom: 7px !important;
+      }
+    }
+  }
+  .revenue {
+    margin-left: 0px !important;
+    .revnue-cards {
+      margin-left: 220px;
+    }
+  }
+
+  .contact-us {
+    .first {
+      display: flex;
+      justify-content: center;
+    }
+    .second {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  section {
+    width: fit-content;
+    .image {
+      display: none;
+    }
+    .main {
+      .card {
+        left: 50% !important;
+        top: 0px !important;
+      }
+      .text {
+        margin-top: 300px !important;
+      }
+      .search-bar {
+        .p-inputtext {
+          font-size: 14px !important;
+        }
+        .btn {
+          bottom: 206px !important;
+          .p-button-help {
+            .pi {
+              font-size: 10px !important;
+            }
+          }
+        }
+      }
+    }
+
+    .cards-bgimage {
+      margin-bottom: 0px !important;
+      display: flex;
+      justify-content: center;
+      height: fit-content !important;
+      .cards {
+        display: flex;
+        justify-content: center;
+        height: fit-content !important;
+      }
+    }
+    .revenue {
+      .revnue-cards {
+        margin-left: 150px;
+      }
+    }
+    .sell {
+      .beats {
+        .p-card {
+          .p-card-content {
+            img {
+              left: -30px !important;
+            }
+          }
+        }
+      }
+      .beats::before,
+      .minimal::before {
+        width: 250px !important;
+        height: 250px !important;
+      }
+    }
+    .contact-us {
+      margin-bottom: 0px !important;
+    }
+  }
+}

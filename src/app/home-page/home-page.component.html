@@ -1,312 +1,321 @@
-<section class="homePage w-100 col-lg-12 col-md-8 col-sm-4">
-  <div class="header mt-3 mb-5 d-flex gap-2 justify-content-end container">
-    <p-button label="Get Started Now" variant="text" />
-    <p-button
-      rounded="true"
-      label="Login"
-      [raised]="true"
-      severity="contrast"
-    />
-  </div>
-  <div
-    class="col-lg -12 col-md-8 col-sm-4 main d-flex align-items-center gap-5 position-relative pb-5 mb-5"
-  >
-    <div class="image blob"><img src="/person.png" alt="guy laughing" /></div>
-    <div class="position-absolute card">
-      <p-card>
-        <ng-template class="position-relative" #header>
-          <p-avatar
-            image="https://primefaces.org/cdn/primeng/images/demo/avatar/xuxuefeng.png"
-            class="mr-2"
-            size="xlarge"
-            shape="circle"
-          />
-          <div class="overlay position-absolute"></div>
-        </ng-template>
-        <ng-template #title> James Bruno </ng-template>
-        <ng-template #subtitle> Digital Marketer </ng-template>
-      </p-card>
+<section class="homePage w-100">
+  <!-- Header -->
+  <div class="header mt-3 mb-5 container">
+    <div class="row justify-content-end">
+      <div class="col-auto">
+        <p-button label="Get Started Now" variant="text"></p-button>
+      </div>
+      <div class="col-auto">
+        <p-button
+          rounded="true"
+          label="Login"
+          [raised]="true"
+          severity="contrast"
+        ></p-button>
+      </div>
     </div>
+  </div>
 
-    <div class="text mt-5 pt-5">
-      <h1 class="mb-5">
-        We Help You
-        <br />
-        <span>Build & Grow an</span>
-        <br />
-        Online Business
-      </h1>
-      <div class="search-bar container">
-        <input
-          type="text"
-          pInputText
-          placeholder="Tell us what you need to build..."
-        />
-        <div class="button position-relative">
-          <p-button
-            class="position-absolute btn"
-            icon="pi pi-search"
-            severity="help"
+  <!-- Main Section -->
+  <div class="main container-fluid pb-5 mb-5">
+    <div class="row">
+      <!-- Image -->
+      <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+        <div class="image blob position-relative">
+          <img src="/person.png" alt="guy laughing" class="w-100" />
+          <img
+            src="/image.png"
+            alt="guy laughing"
+            class="w-100 position-absolute"
+          />
+        </div>
+        <app-card
+          class="position-absolute"
+          [cardClass]="card"
+          [hasAvatar]="true"
+          [avatarUrl]="avatarUrl1"
+          [title]="title1"
+          [subTitle]="subTitle1"
+        ></app-card>
+      </div>
+      <!-- Text and Search -->
+      <div class="col-lg-6 col-md-12 align-self-center text">
+        <h1 class="mb-4 fw-bold fs-1">
+          We Help You
+          <br />
+          <span>Build & Grow an</span>
+          <br />
+          Online Business
+        </h1>
+        <div class="search-bar">
+          <div class="row g-2 align-items-center search">
+            <div class="col-12 col-md-12 d-flex search-bar-input">
+              <input
+                class="fs-5 w-50 position-relative"
+                type="text"
+                pInputText
+                placeholder="Tell us what you need to build..."
+              />
+              <p-button
+                icon="pi pi-search"
+                severity="help"
+                class="btn position-absolute"
+              ></p-button>
+            </div>
+            <div></div>
+          </div>
+        </div>
+        <div class="gradieant position-absolute"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Companies Section -->
+  <div class="companies mt-5 pt-5 mb-5 pb-5 bg-light">
+    <div class="container">
+      <div class="row text-center align-items-center pb-5 pt-5 mt-5 mb-5">
+        <div class="col-6">
+          <span class="companiesSpan fw-bold"
+            >Companies we've helped build</span
+          >
+        </div>
+        <div class="col-6 mt-4">
+          <img
+            class="img-fluid w-75"
+            src="/Companies.png"
+            alt="names of companies"
           />
         </div>
       </div>
     </div>
   </div>
-  <div class="companies mt-5 pt-5 mb-5 pb-5">
-    <div
-      class="compaines-images d-flex justify-content-between container align-items-center"
-    >
-      <span class="companiesSpan">Companies we've helped build</span>
-      <img class="w-50" src="/Companies.png" alt="names of companies" />
-    </div>
-  </div>
-  <div class="sell mt-5 pt-5 mb-5 pb-5 container d-flex justify-content-evenly">
-    <div class="sell-text">
-      <h4 class="text-uppercase mb-3 pb-3">we help you</h4>
-      <h1>
-        Sell
-        <br />
-        Stunning
-        <br />Products
-      </h1>
-      <p class="mt-2 pt-2">
-        We'll guide you through our unique 5-step <br />
-        brand-building framework
-      </p>
-      <p-button
-        class="moreBtn"
-        label="More Details"
-        iconPos="right"
-        severity="help"
-        icon="pi pi-angle-right"
-        rounded="true"
-      />
-    </div>
-    <div class="flex-row d-flex gap-5 products">
-      <div class="minimal position-relative">
-        <p-card>
-          <ng-template #header>
-            <img alt="chair" class="w-100 position-absolute" src="/chair.png" />
-          </ng-template>
-          <ng-template #title>
-            <span class="">Minimal Chair</span>
-          </ng-template>
-          <ng-template #footer>
-            <hr />
-            <div class="d-flex justify-content-between align-items-end gap-4">
-              <p>$204 <span>.00</span></p>
-              <p-button
-                icon="pi pi-shopping-cart
-            "
-                class="w-full"
-                styleClass="w-full"
-              />
-            </div>
-          </ng-template>
-        </p-card>
+
+  <!-- Sell Stunning Products Section -->
+  <div class="sell container mt-5 pt-5 mb-5 pb-5">
+    <div class="row align-items-center">
+      <!-- Text Content -->
+      <div
+        class="col-lg-4 col-md-12 text-center text-lg-start mb-5 pb-5 mb-lg-0"
+      >
+        <div class="sell-text">
+          <h4 class="text-uppercase mb-3 pb-3">we help you</h4>
+        </div>
+        <h1>
+          Sell
+          <br />
+          Stunning
+          <br />
+          Products
+        </h1>
+        <p class="mt-2 pt-2">
+          We'll guide you through our unique 5-step <br />
+          brand-building framework
+        </p>
+        <p-button
+          class="mt-3 moreBtn"
+          label="More Details"
+          iconPos="right"
+          severity="help"
+          icon="pi pi-angle-right"
+          rounded="true"
+        ></p-button>
       </div>
-      <div class="beats position-relative">
-        <p-card>
-          <ng-template #header>
-            <img
-              alt="beats headphones"
-              class="w-100 position-absolute"
-              src="/beats.png"
-            />
-          </ng-template>
-          <ng-template #title>
-            <span class="">Beats Headphone</span>
-          </ng-template>
-          <ng-template #footer>
-            <hr />
-            <div class="d-flex justify-content-between align-items-end gap-4">
-              <p>$74 <span>.00</span></p>
-              <p-button
-                icon="pi pi-shopping-cart
-            "
-                class="w-full"
-                styleClass="w-full"
-              />
-            </div>
-          </ng-template>
-        </p-card>
+      <!-- Product Cards -->
+      <div class="col-lg-8 col-md-12 mt-5 pt-5 pb-3 mb-3">
+        <div class="row g-4">
+          <div class="col-6 col-md-6 col-lg-6">
+            <app-card
+              class="position-relative"
+              [cardClass]="minimalClass"
+              [minimal]="true"
+              [image]="minimalImage"
+              [money]="minimalMoney"
+              [minimalTitle]="minimalTitle"
+              [moneyP]="minimalSubtitle"
+            ></app-card>
+          </div>
+          <div class="col-6 col-md-6 col-lg-6 mt-5">
+            <app-card
+              class="position-relative"
+              [cardClass]="beatsClass"
+              [minimal]="true"
+              [image]="beatsImage"
+              [money]="beatsMoney"
+              [minimalTitle]="beatsTitle"
+              [moneyP]="beatsSubtitle"
+            ></app-card>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="cards-bgimage">
-    <div class="cards d-grid container mt-5 pt-5">
-      <p-card>
-        <ng-template #header>
-          <img alt="fashion" class="w-full" src="/fashion.jpg" alt="image" />
-        </ng-template>
-        <ng-template #title>
-          <span class="text-uppercase fs-6">Fashion Store </span>
-        </ng-template>
-        <ng-template #subtitle>
-          Shop ladies fashion at Missguided USA With hundereds of new styles
-          hitting our shelves every week
-        </ng-template>
-      </p-card>
-      <p-card>
-        <ng-template #header>
-          <img alt="sofa" class="w-full" src="/sofa.jpg" alt="image" />
-        </ng-template>
-        <ng-template #title>
-          <span class="text-uppercase fs-6">Home Furniture</span>
-        </ng-template>
-        <ng-template #subtitle>
-          Provides suprior quality furniture and mattresses at a price that
-          customers can easily afford
-        </ng-template>
-      </p-card>
-      <p-card>
-        <ng-template #header>
-          <img alt="music img" class="w-full" src="/music.jpg" alt="image" />
-        </ng-template>
-        <ng-template #title>
-          <span class="text-uppercase fs-6">super gadget store </span>
-        </ng-template>
-        <ng-template #subtitle>
-          Specialize in selling unique gifts, cool gadgets, outdoor gear and fab
-          toys
-        </ng-template>
-      </p-card>
+  <!-- Testimonials Section -->
+  <div class="cards-bgimage d-flex mb-sm-5 pb-sm-5 justify-content-center">
+    <div
+      class="cards container mt-5 pt-5 row row-cols-4 row-cols-md-2 row-cols-lg-5 g-4"
+    >
+      @for (card of Testimonilas; track card.title) {
+      <div class="col w-100">
+        <app-card
+          class="h-100"
+          [cardClass]="TestimonialsClass"
+          [hasImage]="true"
+          [image]="card.image"
+          [title]="card.title"
+          [subTitle]="card.subTitle"
+        ></app-card>
+      </div>
+      }
     </div>
   </div>
-  <div class="revenue container mt-5 pt-5 mb-5 pb-5 d-flex">
-    <div
-      class="revnue-cards d-flex justify-content-between me-5 pe-5 gap-5 flex-column"
-    >
+
+  <!-- Revenue Section -->
+  <div
+    class="revenue container mt-5 justify-content-between pt-5 mb-5 pb-5 row align-items-center"
+  >
+    <!-- Revenue Cards -->
+    <div class="revnue-cards col-lg-6 col-md-12 d-flex flex-column gap-5">
+      <!-- Blue Card -->
       <div class="blue position-relative">
-        <p-card class="d-flex flex-row gap-2">
-          <div class="wavy-line">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 500 100"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M0,50 C150,0 350,100 500,50"
-                fill="none"
-                stroke="#61c8f6"
-                stroke-width="3"
-              ></path>
-            </svg>
-          </div>
-          <p-avatar
-            image="https://primefaces.org/cdn/primeng/images/demo/avatar/xuxuefeng.png"
-            class="mr-2"
-            size="xlarge"
-            shape="circle"
-          />
-          <div class="money d-flex flex-column ms-4">
-            <h2 class="fw-bold fs-3">$ 7,654 <i class="pi pi-angle-up"></i></h2>
-            <p class="text-uppercases">TOTAL REVENUE <span>+$232</span></p>
-          </div>
-
-          <div class="overlay position-absolute"></div>
-        </p-card>
+        <div class="wavy-line">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 500 100"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,50 C150,0 350,100 500,50"
+              fill="none"
+              stroke="#61c8f6"
+              stroke-width="3"
+            ></path>
+          </svg>
+        </div>
+        <app-card
+          class="d-flex flex-column gap-2"
+          [cardClass]="blueClass"
+          [hasAvatar]="true"
+          [hasOverlay]="true"
+          [avatarUrl]="avatarUrl1"
+          [hasWavy]="false"
+          [revenue]="true"
+          [blue]="true"
+          [revenuetitle]="revnueTitleB"
+          [revenuesubTitle]="revenueSubtitleB"
+          [revenueh2]="revenueh2"
+        ></app-card>
       </div>
 
+      <!-- Green Card -->
       <div class="green position-relative">
-        <p-card class="d-flex flex-row gap-2 ms-5">
-          <div class="wavy-line-green">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 500 100"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M0,50 C100,0 200,100 300,50 C400,0 500,100"
-                fill="none"
-                stroke="#4ee5a3"
-                stroke-width="3"
-              ></path>
-            </svg>
-          </div>
-
-          <div class="money d-flex flex-column ms-4">
-            <h2 class="fw-bold fs-3">$ 9,978 <i class="pi pi-angle-up"></i></h2>
-            <p class="text-uppercases">TOTAL REVENUE <span>+$349</span></p>
-          </div>
-          <p-avatar
-            image="https://primefaces.org/cdn/primeng/images/demo/avatar/xuxuefeng.png"
-            class="mr-2"
-            size="xlarge"
-            shape="circle"
-          />
-          <div class="overlay position-absolute"></div>
-        </p-card>
+        <div class="wavy-line-green">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 500 100"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,50 C100,0 200,100 300,50 C400,0 500,100"
+              fill="none"
+              stroke="#4ee5a3"
+              stroke-width="3"
+            ></path>
+          </svg>
+        </div>
+        <app-card
+          class="d-flex flex-row-reverse gap-2"
+          [cardClass]="greenClass"
+          [hasAvatar]="false"
+          [hasOverlay]="true"
+          [avatarUrl]="avatarUrl1"
+          [hasWavy]="false"
+          [revenue]="true"
+          [green]="true"
+          [revenuetitle]="revnueTitleG"
+          [revenuesubTitle]="revenueSubtitleG"
+          [revenueh2]="revenueh2"
+        ></app-card>
       </div>
     </div>
-    <div class="sell-text ms-5 ps-5">
-      <h4 class="text-uppercase mb-3 pb-3">What we do</h4>
-      <h1>
-        Increase Our
-        <br />
-        Customers
-        <br />Sales
-      </h1>
-      <p class="mt-2 pt-2">
-        Our customers are seeing big results within <br />
-        the first three months
-      </p>
-      <p-button
-        class="moreBtn"
-        label="More Details"
-        iconPos="right"
-        severity="help"
-        icon="pi pi-angle-right"
-        rounded="true"
-      />
+
+    <!-- Sell Section -->
+    <div class="sell col-lg-6 col-md-12 text-center text-lg-start mt-5 mt-lg-0">
+      <div class="sell-text">
+        <h4 class="text-uppercase mb-3 pb-3">What we do</h4>
+        <h1>
+          Increase Our
+          <br />
+          Customers
+          <br />
+          Sales
+        </h1>
+        <p class="mt-2 pt-2">
+          Our customers are seeing big results within <br />
+          the first three months
+        </p>
+        <p-button
+          class="moreBtn mt-3"
+          label="More Details"
+          iconPos="right"
+          severity="help"
+          icon="pi pi-angle-right"
+          rounded="true"
+        ></p-button>
+      </div>
     </div>
   </div>
-  <div class="bg">
-    <div
-      class="contact-us mt-5 pt-5 container d-flex flex-row justify-content-between"
-    >
-      <form [formGroup]="contact">
-        <p-card>
-          <ng-template #header> <h3>Write Us</h3> </ng-template>
 
-          <p-floatlabel class="mb-5">
-            <input
-              pInputText
-              id="email"
-              formControlName="email"
-              autocomplete="off"
-              class="w-100 p-0"
-            />
-            <label for="over_label">Email</label>
-          </p-floatlabel>
-          <textarea
-            placeholder="Enter Your Message"
-            rows="5"
-            cols="30"
-            pTextarea
-            formControlName="message"
-          ></textarea>
+  <!-- Contact Us Section -->
+  <div class="bg-img container">
+    <div class="contact-us mt-5 pt-5 mb-5 pb-5 row align-items-center">
+      <!-- Contact Form -->
+      <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 first">
+        <form [formGroup]="contact">
+          <p-card>
+            <ng-template #header>
+              <h3>Write Us</h3>
+            </ng-template>
 
-          <ng-template #footer>
-            <div class="flex gap-4 mt-1">
-              <p-button
-                (onClick)="onSubmit()"
-                label="SEND YOUR MESSAGE"
-                severity="help"
-                class="w-full"
-                [outlined]="true"
-                styleClass="w-full"
-                [disabled]="contact.invalid"
+            <p-floatlabel class="mb-5">
+              <input
+                pInputText
+                id="email"
+                formControlName="email"
+                autocomplete="off"
+                class="w-100 p-0"
               />
-            </div>
-          </ng-template>
-        </p-card>
-      </form>
+              <label for="over_label">Email</label>
+            </p-floatlabel>
+            <textarea
+              placeholder="Enter Your Message"
+              rows="5"
+              cols="30"
+              pTextarea
+              formControlName="message"
+            ></textarea>
 
-      <div class="bg-img">
-        <img class="w-50 h-100" src="/laugh.png" alt="laughing guy" />
+            <ng-template #footer>
+              <div class="d-flex gap-4 mt-3">
+                <p-button
+                  (onClick)="onSubmit()"
+                  label="SEND YOUR MESSAGE"
+                  severity="help"
+                  class="w-100"
+                  [outlined]="true"
+                  styleClass="w-100"
+                  [disabled]="contact.invalid"
+                  [rounded]="true"
+                ></p-button>
+              </div>
+            </ng-template>
+          </p-card>
+        </form>
+      </div>
+
+      <!-- Background Image -->
+      <div class="col-lg-6 col-md-6 text-center second">
+        <img class="img-fluid w-75" src="/laugh.png" alt="laughing guy" />
       </div>
     </div>
   </div>
 </section>
-<div class="gradieant"></div>

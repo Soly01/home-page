@@ -1,13 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
-// Variable overrides first
-
 $primary: #900;
 $enable-shadows: true;
 $prefix: "mo-";
 
-// Then import Bootstrap
-@import "../node_modules/bootstrap/scss/bootstrap";
-@import "primeicons/primeicons.css";
+@use "primeicons/primeicons.css";
+
 body {
   font-family: "Mona Sans", sans-serif !important;
 }
@@ -18,4 +14,50 @@ body {
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "wdth" 100;
+}
+.p-card {
+  background: var(--p-surface-0) !important;
+  color: black !important;
+  justify-content: center;
+  text-align: center;
+}
+.moreBtn {
+  color: white;
+  .pi {
+    color: #714bec;
+    background-color: white;
+    border-radius: 50%;
+    padding: 6px;
+    font-size: 25px !important;
+    text-transform: uppercase;
+  }
+  .p-button-help {
+    background: linear-gradient(to right, #4834d0, #903aff) !important;
+  }
+  .p-button-label {
+    padding: 10px 35px !important;
+
+    color: white;
+    text-transform: uppercase;
+  }
+  .p-button-rounded {
+    border-radius: 25px !important;
+  }
+}
+.overlay {
+  transform: translate(-50%, -50%);
+  width: 110px;
+  height: 110px;
+  border: 3px solid purple;
+  border-radius: 50%;
+  border-bottom: none;
+  border-left: none;
+  border-top: none;
+}
+.p-avatar-image {
+  background: #fff2f0 !important;
+  position: relative;
+}
+.p-toast-message-success .p-toast-detail {
+  color: black !important;
 }

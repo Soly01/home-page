@@ -28,7 +28,6 @@
     padding: 2rem;
     width: 100%;
     margin-left: 0px !important;
-    place-items: left;
     .p-card {
       width: 270px;
       height: 400px;
@@ -43,6 +42,9 @@
           }
         }
       }
+    }
+    .beats::before {
+      left: 50% !important;
     }
   }
   .revenue {
@@ -153,8 +155,8 @@
 
     .cards-bgimage {
       margin-bottom: 0px !important;
-      display: flex;
-      justify-content: center;
+      display: flex !important;
+      justify-content: center !important;
       height: fit-content !important;
       .cards {
         display: flex;
@@ -165,14 +167,42 @@
     .revenue {
       .revnue-cards {
         margin-left: 150px;
+        .headphone,
+        .chair {
+          display: flex !important;
+          justify-content: center !important;
+        }
       }
     }
     .sell {
       .beats {
+        justify-content: center !important;
+        display: flex !important;
         .p-card {
           .p-card-content {
             img {
               left: -30px !important;
+              width: 260px !important;
+              height: 260px !important;
+              bottom: 25% !important;
+              left: 50% !important;
+              transform: translate(-50%, -50%) !important;
+            }
+          }
+        }
+      }
+      .minimal {
+        justify-content: center !important;
+        display: flex !important;
+        margin-bottom: 130px;
+        .p-card {
+          .p-card-content {
+            img {
+              width: 260px !important;
+              height: 260px !important;
+              bottom: 1% !important;
+              left: 50% !important;
+              transform: translate(-50%, -50%) !important;
             }
           }
         }
@@ -181,6 +211,8 @@
       .minimal::before {
         width: 250px !important;
         height: 250px !important;
+        top: 50% !important;
+        bottom: 50% !important;
       }
     }
     .contact-us {
@@ -202,7 +234,7 @@
         .btn {
           bottom: 113px !important;
           transform: translateY(-100px);
-          left: 70% !important;
+          left: 72% !important;
         }
       }
     }
@@ -212,6 +244,15 @@
         justify-content: center;
         display: flex;
         margin-bottom: 170px;
+      }
+      .minimal {
+        .p-card {
+          .p-card-content {
+            img {
+              bottom: 30% !important;
+            }
+          }
+        }
       }
       .minimal,
       .beats {
@@ -230,13 +271,22 @@
         margin-left: 0px !important;
       }
       .revnue-cards {
-        margin-left: 70px !important;
+        margin-left: 50px !important;
       }
     }
 
-    .green::before,
+    .minimal::before,
     .beats::before {
       display: none;
+    }
+    .green::before,
+    .blue::before {
+      display: none;
+    }
+    .cards-bgimage {
+      .cards {
+        width: fit-content;
+      }
     }
   }
 }

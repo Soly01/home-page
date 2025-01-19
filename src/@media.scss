@@ -52,6 +52,11 @@
       margin-left: 110px;
       .green {
         margin-top: 30px;
+        .p-card {
+          .overlay {
+            top: 60% !important;
+          }
+        }
       }
       .green::before {
         top: 0px !important;

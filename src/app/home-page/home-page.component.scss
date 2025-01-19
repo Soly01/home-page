@@ -260,7 +260,7 @@ section {
           .p-avatar-xl {
             width: 6rem !important;
             height: 6rem !important;
-            padding: 1px;
+            padding: 20px;
           }
           .p-avatar-image {
             background: #f7f5f6 !important;
@@ -292,6 +292,8 @@ section {
         .overlay {
           top: 44%;
           left: 20%;
+          width: 80px;
+          height: 80px;
         }
       }
       .green .p-card {
